@@ -1,38 +1,248 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+    margin: 0.4rem ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__container{
+    margin: 0 7rem 0 7rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header__logo{
+    margin-right: 1rem;
+    margin-top: 0.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header__dropdown{
+    margin: 0.5rem 3rem 0.5rem 2rem;
+    width: 10rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__container .header__dropdown button{
+    color: #59312c;
+    font-weight: 500;
+    height: 2.2rem;
+    border: #59312c 1px solid;
+}
+
+.header__container .header__dropdown button:hover{
+    color: black;
+    border-color: #59312c ;
+}
+
+.header__dropdown i{
+    margin-right: 0.2rem ;
+    color: #dab744;
+    border:none;
+}
+
+.header__search input{
+    margin: 0.5rem 6rem 0.5rem 1.2rem;
+    width: 32rem;
+    height: 2.2rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+.btn__dangky{
+    color: #59312c;
+    background-color: #dab744;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    padding: 0.3rem 1rem 0.4rem 1rem;
+    text-align: center;
+    border: 1px solid #dab744;
+    margin: 0.5rem 0.5rem;
+    width: 7.2rem;
+    font-weight: 500;
+}
+
+.btn__dangky:hover{
+    color: #dab744;
+    background-color:white ;
+    transition: ease-in 0.3s all;
+    border: 1px solid #59312c ;
+    cursor: pointer;
+}
+
+.btn__dangnhap{
+    color: #dab744;
+    background-color:#59312c ;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    padding: 0.3rem 1rem 0.4rem 1rem;
+    text-align: center;
+    border: 1px solid #59312c;
+    margin: 0.5rem 0.5rem;
+    width: 7.2rem;
+    font-weight: 500;
+}
+
+.btn__dangnhap:hover{
+    color: #59312c;
+    background-color:white ;
+    transition: ease-in 0.3s all;
+    border: 1px solid #dab744 ;
+    cursor: pointer;
+}
+
+.footer{
+    color:white;
+    background-color: #1e1e2a;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.footer__item{
+    width: calC(100%/3);
+    margin: 1rem 1.8rem;
+}
+
+.footer h1{
+    color: white;
+    font-size: 1rem;   
+}
+
+.footer__info h1{
+    margin: 3rem 0 0 0;
+}
+
+.footer__info input{
+    margin: 0.5rem 1rem 1rem 0 ;
+    width: 18rem;
+    height: 2.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    padding: 0 1rem;
+    color:black;
+}
+
+.footer button{
+    color: #59312c;
+    background-color:#dab744 ;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    padding: 0.3rem 1rem 0.4rem 1rem;
+    text-align: center;
+    border: 1px solid #59312c;
+    font-weight: 500; 
+}
+
+.footer__map p{
+    margin: 0.2rem 0;
+}
+
+.footer button:hover{
+    color: #dab744;
+    background-color:white ;
+    transition: ease-in 0.3s all;
+    border: 1px solid #59312c ;
+    cursor: pointer;
+}
+
+.footer__form input{
+    margin: 0.2rem 1rem 0.2rem 0 ;
+    width: 22rem;
+    height: 2.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    padding: 0 1rem;
+    color:black;
+}
+
+.footer__item iframe{
+    height:18rem;
+    width: 100%;
+}
+
+.footer hr{
+    border: 2px solid wheat;
+    width: 95%;
+    margin: auto;
+}
+
+.heading__title{
+    font-size: 1.5rem;
+}
+
+.form-group{
+    margin-bottom: 0.5rem;
+}
+
+.form-group p{
+    margin-bottom: 0.2rem;
+}
+
+.modal-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.errorMess{
+    color:red;
+    margin-bottom: 0.2rem;
+}
+
+.title__course{
+    margin-top: 1.2rem;
+    color:black;
+    font-size: 1.3rem;
+}
+
+.course__item p{
+    margin: 0.2rem;
+}
+
+.course__item .btn__dangky{
+    position: relative;
+    left:7.5rem;
+}
+
+.user__container{
+    background-color: black;
+    padding: 5rem 12rem;
+    color: black;
+    height: 100%;
+}
+
+.user__form{
+    width: 50%;
+    padding: 3.5rem 4rem;
+    background-color: #f4cd27;
+    border-bottom-right-radius: 0.8rem;
+    border-top-right-radius: 0.8rem ;
+}
+
+.user__img{
+    padding: 0;
+    width: 50%;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    overflow: hidden;
+    
+}
+
+.user__img img{
+    width: 100%;
+    height: 100%;
+}
+
+.user__content{
+    margin: auto;
+}
+
+.user__form h1{
+    font-weight: 700;
+    color:#59312c;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.user__form button{
+    margin-top: 3rem;
+    
 }

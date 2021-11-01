@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import HomeScreen from './Screens/Home';
+import { HomeTemplate } from './Template/Home';
+import DetailScreen from './Screens/Detail'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        
+        <Switch>
+            <HomeTemplate path="/home" component={HomeScreen}/>
+            <HomeTemplate path="/detail/:maKhoaHoc" component={DetailScreen}/>
+        </Switch>
+    </BrowserRouter>
   );
 }
 
