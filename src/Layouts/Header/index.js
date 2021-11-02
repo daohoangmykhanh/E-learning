@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Axios from 'axios';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import ModalSignIn from '../../Components/ModalSignIn';
 import ModalSignUp from '../../Components/ModalSignUp';
+import { danhMucKhoaHoc } from '../../Redux/Actions/user';
 
 class Header extends Component {
     
@@ -46,21 +46,7 @@ class Header extends Component {
     }
 
     componentDidMount(){
-      Axios({
-        method:"GET",
-        url: "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc",
-        headers: {
-          "TokenCybersoft" : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCAwOEUiLCJIZXRIYW5TdHJpbmciOiIyOC8wMi8yMDIyIiwiSGV0SGFuVGltZSI6IjE2NDYwMDY0MDAwMDAiLCJuYmYiOjE2MTY1MTg4MDAsImV4cCI6MTY0NjE1NDAwMH0.Aojk9-Qo5B5whL6jc8aZ4IOCm1RF9MrUhORXCrWBwEA'
-        }
-      }).then(res => {
-        this.props.dispatch({
-          type: 'DANH_MUC_KHOA_HOC',
-          list: res.data
-        })
-        console.log(res);
-      }).catch(err => {
-        console.log(err)
-      })
+        this.props.dispatch(danhMucKhoaHoc())
     }
 }
 

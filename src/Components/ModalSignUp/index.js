@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as yup from 'yup';
-import Axios from 'axios';
-
-const signUpSchema = yup.object().shape({
-    taiKhoan: yup.string().required("Tài khoản không được bỏ trống!"),
-    matKhau: yup.string().required("Mật khẩu không được bỏ trống!"),
-    nhapLaiMatKhau: yup.string().required("Nhập lại mật khẩu không được bỏ trống!"),
-    hoTen: yup.string().required("Họ tên không được bỏ trống!"),
-    email: yup.string().required("Email không được bỏ trống!").email("Email không đúng định dạng!"),
-    soDT: yup.string().required("Số điện thoại không được bỏ trống!").matches(/^[0-9]+$/),
-})
+import { userService } from '../../Services';
+import { signUpSchema} from '../../Services/user'
 
 export default class ModalSignUp extends Component {
     render() {
@@ -31,14 +22,8 @@ export default class ModalSignUp extends Component {
                             }}
                             validationSchema={signUpSchema}
                             onSubmit = {(values) => {
-                                Axios({
-                                    method: "POST",
-                                    url: "https://elearningnew.cybersoft.edu.vn/api/QuanLyNguoiDung/DangKy",
-                                    data: values,                                  
-                                    headers: {
-                                        "TokenCybersoft" : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCAwOEUiLCJIZXRIYW5TdHJpbmciOiIyOC8wMi8yMDIyIiwiSGV0SGFuVGltZSI6IjE2NDYwMDY0MDAwMDAiLCJuYmYiOjE2MTY1MTg4MDAsImV4cCI6MTY0NjE1NDAwMH0.Aojk9-Qo5B5whL6jc8aZ4IOCm1RF9MrUhORXCrWBwEA'
-                                    }
-                                }).then(res => {
+                               userService.signUp(values)
+                               .then(res => {
                                     console.log(res)
                                 }).catch(err => {
                                     console.log(err)

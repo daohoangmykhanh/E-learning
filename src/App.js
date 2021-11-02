@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
         
         <Switch>
-            <HomeTemplate path="/home" component={HomeScreen}/>
-            <HomeTemplate path="/detail/:maKhoaHoc" component={DetailScreen}/>
+            <HomeTemplate path="/" component={HomeScreen}/>
+            <HomeTemplate path="/detail/:courseId" component={DetailScreen}/>
         </Switch>
     </BrowserRouter>
   );

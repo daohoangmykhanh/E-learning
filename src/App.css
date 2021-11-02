@@ -165,9 +165,6 @@
     margin: auto;
 }
 
-.heading__title{
-    font-size: 1.5rem;
-}
 
 .form-group{
     margin-bottom: 0.5rem;
@@ -245,4 +242,13 @@
 .user__form button{
     margin-top: 3rem;
     
+}
+
+.detail__container{
+    padding: 5rem;
+}
+
+.heading__title{
+    padding: 4rem 0 2rem 0;
+    font-size: 2.2rem;
 }
