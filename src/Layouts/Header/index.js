@@ -14,7 +14,7 @@ class Header extends Component {
             <div className="header">
                 <div className=" d-flex header__container">
                     <div className="header__logo">
-                       <NavLink to="/home"> <img src="./image/MIN-OP1.png" height="45"/> </NavLink>
+                       <NavLink to="/"> <img src="./image/MIN-OP1.png" height="45"/> </NavLink>
                     </div>
                     <div className="header__dropdown">
                         <>

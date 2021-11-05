@@ -29,9 +29,9 @@ export const danhSachKhoaHoc = () => {
     }
 }
 
-export const thongTinKhoaHoc = () => {
+export const thongTinKhoaHoc = (id) => {
     return dispatch => {
-        courseService.thongTinKhoaHoc()
+        courseService.thongTinKhoaHoc(id)
         .then(res => {
            dispatch(createAction(THONG_TIN_KHOA_HOC,res.data));
            console.log(res)

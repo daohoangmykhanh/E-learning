@@ -16,7 +16,7 @@ class DetailScreen extends Component {
     }
 
     componentDidMount(){
-        this.props.dispatch(thongTinKhoaHoc())
+        this.props.dispatch(thongTinKhoaHoc(this.props.match.params.courseId))
     }
 }
 
